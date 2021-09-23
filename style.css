@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #e5e5e5;
+	display: flex;
+	padding-top: 5rem;
+	margin: 0px 0px 0px 50px;
+	justify-content: end;
+	overflow: auto;
+	position: relative;
+}
+
+.row {
+	display: flex;
+	width: 750px;
+	justify-content: space-between;
+}
+
+.column {
+	width: 700px;
+	max-height: 700px;
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	border: 2px dotted;
+	animation: styleS 2s linear infinite alternate running 0s forwards;
+	margin: 0px 50px 0px 0px;
+	padding: 15px;
+}
+.title {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	transform: translate(-105%);
+	color: rgba(17, 17, 17, 0.8);
+}
+@media (max-width: 1571px) {
+	.column {
+		width: 500px;
+		max-height: 500px;
+		padding: 10px;
+		margin: 0px 15px 0px 0px;
+	}
+	body {
+		margin: 0px 0px 0px 15px;
+	}
+
+	.title {
+		transform: translate(-50%);
+	}
+}
+
+.col-header {
+	width: 150px;
+	box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+	animation: styleS 2s linear infinite alternate running 0s forwards;
+	border-radius: 20px 20px 0px 0px;
+	padding: 0.8rem 1rem;
+	color: #fff;
+	text-align: center;
+	border-bottom: 1px solid black !important;
+}
+
+.item {
+	width: 150px;
+	margin-bottom: 2px;
+	animation: styleS 2s linear infinite alternate running 0s forwards;
+	background: rgb(135, 231, 215);
+	padding: 0.8rem 1rem;
+	color: rgba(17, 17, 17, 0.6);
+	text-align: center;
+	cursor: grab;
+}
+
+.item:active {
+	cursor: grabbing;
+	box-shadow: none;
+}
+
+.placeholder {
+	width: 150px;
+	height: auto;
+	padding-bottom: 100px;
+}
+
+.b {
+	background: linear-gradient(90deg, #bcdf5e 0%, #8fd3f4 100%);
+}
+
+.k {
+	background: linear-gradient(90deg, #209cff 0%, #45db59 100%);
+}
+
+.s {
+	background: linear-gradient(90deg, #fa84fa 0%, #f48fb6 100%);
+}
+
+.o {
+	background: linear-gradient(90deg, #3253e6 0%, #e96841 100%);
+}
+
+.hold {
+	border: 1px solid rgb(61, 235, 90);
+	box-shadow: none;
+}
+
+.hide {
+	display: none;
+}
+
+.hovered {
+	border-top: 2px solid black;
+}
+@keyframes styleS {
+	0% {
+		border-color: rgb(135, 231, 215);
+		box-shadow: 3px 3px 9px rgb(135, 231, 215);
+	}
+	50% {
+		border-color: rgb(69, 224, 198);
+		box-shadow: 3px 3px 9px rgb(69, 224, 198);
+	}
+	100% {
+		border-color: rgb(85, 163, 150);
+		box-shadow: 3px 3px 9px rgb(85, 163, 150);
+	}
+}
